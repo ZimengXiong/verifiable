@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X Scroll Counter</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0f1419;
+        --panel: #18202a;
+        --text: #e7e9ea;
+        --muted: #8b98a5;
+        --border: #2f3336;
+      }
+
+      body {
+        margin: 0;
+        width: 330px;
+        background: linear-gradient(180deg, #10171f, var(--bg));
+        color: var(--text);
+        font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .wrap {
+        padding: 16px;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .value {
+        margin-top: 4px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .list {
+        margin-top: 12px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 6px 0;
+      }
+
+      .muted {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .dot {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>X Scroll Counter</h1>
+      <div class="grid">
+        <div class="card">
+          <div class="label">Posts Scrolled</div>
+          <div class="value" id="postsScrolled">0</div>
+        </div>
+        <div class="card">
+          <div class="label">Badge Holders</div>
+          <div class="value" id="badgePosts">0</div>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="row">
+          <span>No badge</span>
+          <strong id="noBadgeCount">0</strong>
+        </div>
+        <div class="row">
+          <span><span class="dot" style="background:#1d9bf0"></span>Blue badge</span>
+          <strong id="blueCount">0</strong>
+        </div>
+        <div class="row">
+          <span><span class="dot" style="background:#f7b928"></span>Gold badge</span>
+          <strong id="goldCount">0</strong>
+        </div>
+        <div class="row">
+          <span><span class="dot" style="background:#8899a6"></span>Gray badge</span>
+          <strong id="grayCount">0</strong>
+        </div>
+        <div class="row">
+          <span>Unclassified badge</span>
+          <strong id="unknownCount">0</strong>
+        </div>
+      </div>
+
+      <div class="muted" id="status">Open X and start scrolling.</div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+  </html>
