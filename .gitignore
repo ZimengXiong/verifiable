@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+
+# Swift/Xcode
+.build/
+DerivedData/
+*.xcworkspace
+*.xcuserdata
+Pods/
+
+# Rust
+target/
+Cargo.lock
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# ML models / large data
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.gguf
+*.bin
+*.onnx
+*.pack
+*.zip
+*.tar.gz
+
+# Git
+.git/
+
+# Logs
+*.log
+logs/
